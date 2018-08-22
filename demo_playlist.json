@@ -1,0 +1,25 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "MusicPlaylist",
+  "track":
+    [
+	  {"@id": "https://musicbrainz.org/recording/5a337871-a86e-4fb9-a42f-c4777dc4c93e"},
+	  {
+	    "@id": "https://musicbrainz.org/recording/0e6363ea-d26e-4bfa-9b38-dfe05488c812",
+		"@type": "MusicRecording",
+	    "name": "Rauch-Haus-Song",
+		"byArtist": "Ton Steine Scherben",
+		"inAlbum": {
+		  "@id": "https://musicbrainz.org/release/c7518036-16ac-4d55-be9b-27c93b107865",
+		  "name": "Keine Macht für Niemand"
+		}
+	  },
+	  {
+		"@type": "MusicRecording",
+	    "name": "Komplett im Arsch",
+		"byArtist": "Feine Sahne Fischfilet",
+		"url": "https://www.youtube.com/watch?v=3-Oe1XzxCw8",
+		"inLanguage": "de"
+	  }
+	]
+}

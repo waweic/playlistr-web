@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PlaylistR - Playlists for fun and (non)-profit</title>
+</head>
+<body>
+<header>
+<h1 class="pagetitle">PlaylistR</h1>
+</header>
+<noscript>This page has intentionally not been designed for non-javascript users. Please resort to the <a href="https://github.com/waweic/playlistr">repository</a> for alternatives.</noscript>
+
+<script>
+function use_file() {
+    var selectedFile = document.getElementById('json-input').files[0];
+	console.log(selectedFile);
+	if(selectedFile.type == "application/json") {
+	    var reader = new FileReader();
+		
+        reader.onload = handleLoadedFile;
+        reader.readAsText(selectedFile);
+		
+	}
+	else {
+	  alert("This function is not yet implemented, just JSON-files are readable for now");
+	}
+}
+
+function handleLoadedFile(infile) {
+    reader = infile.target;
+    document.getElementsByClassName("playlist")[0].innerHTML = reader.result
+	console.log(reader.result);
+	console.log(reader);
+	var playlist = JSON.parse(reader.result);
+	console.log(playlist);  
+}
+</script>
+<input type="file" id="json-input">
+<button onclick="use_file();">Use playlist</button>
+
+<div class="playlist">
+<ol>
+</ol>
+</div>
+
+</body>
+</html>
